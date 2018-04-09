@@ -1,0 +1,4 @@
+Bundle-Name: milestone
+Bundle-SymbolicName: milestone
+Bundle-Version: 1.0.0
+Export-Package: milestone.constants

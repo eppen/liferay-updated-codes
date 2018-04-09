@@ -1,0 +1,9 @@
+Bundle-Name: userapi-api
+Bundle-SymbolicName: userapi.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	userapi.exception,\
+	userapi.model,\
+	userapi.service,\
+	userapi.service.persistence
+-includeresource: META-INF/service.xml=../userapi-service/service.xml

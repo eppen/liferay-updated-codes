@@ -1,0 +1,4 @@
+Bundle-Name: user-notification
+Bundle-SymbolicName: user.notification
+Bundle-Version: 1.0.0
+Export-Package: user.notification.constants

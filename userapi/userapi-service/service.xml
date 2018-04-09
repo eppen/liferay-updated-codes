@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="userapi" auto-namespace-tables="false">
+	<namespace>User</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager ">-->
+	<entity local-service="true" name="activeemployeeinfosample" remote-service="true" >
+		<column name="srno" primary="true" type="int" />
+		<column name="Milestone" type="String" />
+		<column name="EmpId" type="String" />
+		<column name="Name" type="String" />
+		<column name="Emailid" type="String" />
+		<column name="Reason" type="String" />
+		<column name="Photo" type="String" />
+		<column name="DOJ" type="String" />
+		<column name="ExitOn" type="String" />
+		<column name="Birthday" type="String" />
+		<column name="Anniversary" type="String" />
+		<column name="Business" type="String" />
+		<column name="Unit" type="String" />
+		<column name="GradeGroup" type="String" />
+		<column name="Grade" type="String" />
+		<column name="FunctionName" type="String" />
+		<column name="Department" type="String" />
+		<column name="Designation" type="String" />
+		<column name="Zone" type="String" />
+		<column name="Region" type="String" />
+		<column name="Location" type="String" />
+		<column name="Product" type="String" />
+		<column name="JVBranch" type="String" />
+		<column name="Branch" type="String" />
+		<column name="Costcenter" type="String" />
+		<column name="AreaHandled" type="String" />
+		<column name="gender" type="String" />
+		<column name="FirstName" type="String" />
+		<column name="LastName" type="String" />
+		
+		<!-- Finder methods -->
+		<finder name="EmpId" return-type="Collection">
+			<finder-column name="EmpId" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="screennameempidmapping" remote-service="true" >
+		<column name="srno" primary="true" type="int" />
+		<column name="screenname" type="String" />
+		<column name="empid" type="String" />
+		
+		<!-- Finder methods -->
+		<finder name="screenname" return-type="Collection">
+			<finder-column name="screenname" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="business" remote-service="true" >
+		<column name="business_id" primary="true" type="int" />
+		<column name="business" type="String" />
+		<column name="short_name" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="grade" remote-service="true" >
+		<column name="grade_id" primary="true" type="int" />
+		<column name="grade" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="zone" remote-service="true" >
+		<column name="zone_id" primary="true" type="int" />
+		<column name="zone" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="unit" remote-service="true" >
+		<column name="unit_id" primary="true" type="int" />
+		<column name="unit" type="String" />
+		<column name="short_name" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="regiontable" remote-service="true" >
+		<column name="region_id" primary="true" type="int" />
+		<column name="region" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="functiontable" remote-service="true" >
+		<column name="function_id" primary="true" type="int" />
+		<column name="function" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="branch" remote-service="true" >
+		<column name="branch_id" primary="true" type="int" />
+		<column name="branch" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="department" remote-service="true" >
+		<column name="dept_id" primary="true" type="int" />
+		<column name="department" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="locationtable" remote-service="true" >
+		<column name="loc_id" primary="true" type="int" />
+		<column name="location" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="designation" remote-service="true" >
+		<column name="desig_id" primary="true" type="int" />
+		<column name="designation" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="areahandled" remote-service="true" >
+		<column name="area_id" primary="true" type="int" />
+		<column name="area" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+	<entity local-service="true" name="jvbranch" remote-service="true" >
+		<column name="jvbranch_id" primary="true" type="int" />
+		<column name="jvbranch" type="String" />
+		<column name="business_id" type="int" />
+		<column name="isactive" type="int" />
+	</entity>
+	
+</service-builder>

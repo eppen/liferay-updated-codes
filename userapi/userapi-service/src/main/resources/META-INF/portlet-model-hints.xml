@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="userapi.model.activeemployeeinfosample">
+		<field name="srno" type="int" />
+		<field name="Milestone" type="String" />
+		<field name="EmpId" type="String" />
+		<field name="Name" type="String" />
+		<field name="Emailid" type="String" />
+		<field name="Reason" type="String" />
+		<field name="Photo" type="String" />
+		<field name="DOJ" type="String" />
+		<field name="ExitOn" type="String" />
+		<field name="Birthday" type="String" />
+		<field name="Anniversary" type="String" />
+		<field name="Business" type="String" />
+		<field name="Unit" type="String" />
+		<field name="GradeGroup" type="String" />
+		<field name="Grade" type="String" />
+		<field name="FunctionName" type="String" />
+		<field name="Department" type="String" />
+		<field name="Designation" type="String" />
+		<field name="Zone" type="String" />
+		<field name="Region" type="String" />
+		<field name="Location" type="String" />
+		<field name="Product" type="String" />
+		<field name="JVBranch" type="String" />
+		<field name="Branch" type="String" />
+		<field name="Costcenter" type="String" />
+		<field name="AreaHandled" type="String" />
+		<field name="gender" type="String" />
+		<field name="FirstName" type="String" />
+		<field name="LastName" type="String" />
+	</model>
+	<model name="userapi.model.areahandled">
+		<field name="area_id" type="int" />
+		<field name="area" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.branch">
+		<field name="branch_id" type="int" />
+		<field name="branch" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.business">
+		<field name="business_id" type="int" />
+		<field name="business" type="String" />
+		<field name="short_name" type="String" />
+	</model>
+	<model name="userapi.model.department">
+		<field name="dept_id" type="int" />
+		<field name="department" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.designation">
+		<field name="desig_id" type="int" />
+		<field name="designation" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.functiontable">
+		<field name="function_id" type="int" />
+		<field name="function" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.grade">
+		<field name="grade_id" type="int" />
+		<field name="grade" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.jvbranch">
+		<field name="jvbranch_id" type="int" />
+		<field name="jvbranch" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.locationtable">
+		<field name="loc_id" type="int" />
+		<field name="location" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.regiontable">
+		<field name="region_id" type="int" />
+		<field name="region" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.screennameempidmapping">
+		<field name="srno" type="int" />
+		<field name="screenname" type="String" />
+		<field name="empid" type="String" />
+	</model>
+	<model name="userapi.model.unit">
+		<field name="unit_id" type="int" />
+		<field name="unit" type="String" />
+		<field name="short_name" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+	<model name="userapi.model.zone">
+		<field name="zone_id" type="int" />
+		<field name="zone" type="String" />
+		<field name="business_id" type="int" />
+		<field name="isactive" type="int" />
+	</model>
+</model-hints>

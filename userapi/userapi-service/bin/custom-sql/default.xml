@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	
+	<sql id="empbirthday">
+    <![CDATA[
+     SELECT contactid,firstname,lastname,jobtitle,birthday,-1 FROM Contact_
+WHERE DATE_ADD(birthday,INTERVAL YEAR(CURDATE())-YEAR(birthday)
+  + IF(MONTH(CURDATE()) > MONTH(birthday), 0,
+     IF(MONTH(CURDATE()) = MONTH(birthday) AND DAY(CURDATE()) > DAY(birthday), 0, 0))
+       YEAR)
+        BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 DAY) AND DATE_ADD(CURDATE(), INTERVAL -1 DAY)
+UNION
+SELECT contactid,firstname,lastname,jobtitle,birthday,
+IF(DATE_ADD(birthday,INTERVAL YEAR(CURDATE())-YEAR(birthday)
+  + IF(MONTH(CURDATE()) > MONTH(birthday), 1,
+     IF(MONTH(CURDATE()) = MONTH(birthday) AND DAY(CURDATE()) > DAY(birthday), 1, 0))
+       YEAR) =CURDATE(),0,1)
+
+ FROM Contact_
+WHERE DATE_ADD(birthday,INTERVAL YEAR(CURDATE())-YEAR(birthday)
+  + IF(MONTH(CURDATE()) > MONTH(birthday), 1,
+     IF(MONTH(CURDATE()) = MONTH(birthday) AND DAY(CURDATE()) > DAY(birthday), 1, 0))
+       YEAR)
+        BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+        ]]>
+	</sql>
+	
+	
+	
+	<sql id="empanniversary">
+    <![CDATA[
+ SELECT *,-1,STR_TO_DATE(data_,'%d-%M-%Y') FROM ExpandoValue
+WHERE TABLEID=29863 AND COLUMNID=2599323 and DATE_ADD(STR_TO_DATE(data_,'%d-%M-%Y'),INTERVAL YEAR(CURDATE())-YEAR(STR_TO_DATE(data_,'%d-%M-%Y'))
+  + IF(MONTH(CURDATE()) > MONTH(STR_TO_DATE(data_,'%d-%M-%Y')), 0,
+     IF(MONTH(CURDATE()) = MONTH(STR_TO_DATE(data_,'%d-%M-%Y')) AND DAY(CURDATE()) > DAY(STR_TO_DATE(data_,'%d-%M-%Y')), 0, 0))
+       YEAR)
+        BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 DAY) AND DATE_ADD(CURDATE(), INTERVAL -1 DAY)
+UNION
+SELECT * ,
+IF(DATE_ADD(STR_TO_DATE(data_,'%d-%M-%Y'),INTERVAL YEAR(CURDATE())-YEAR(STR_TO_DATE(data_,'%d-%M-%Y'))
+  + IF(MONTH(CURDATE()) > MONTH(STR_TO_DATE(data_,'%d-%M-%Y')), 1,
+     IF(MONTH(CURDATE()) = MONTH(STR_TO_DATE(data_,'%d-%M-%Y')) AND DAY(CURDATE()) > DAY(STR_TO_DATE(data_,'%d-%M-%Y')), 1, 0))
+       YEAR) =CURDATE(),0,1),STR_TO_DATE(data_,'%d-%M-%Y')
+
+ FROM ExpandoValue
+WHERE TABLEID=29863 AND COLUMNID=2599323 and DATE_ADD(STR_TO_DATE(data_,'%d-%M-%Y'),INTERVAL YEAR(CURDATE())-YEAR(STR_TO_DATE(data_,'%d-%M-%Y'))
+  + IF(MONTH(CURDATE()) > MONTH(STR_TO_DATE(data_,'%d-%M-%Y')), 1,
+     IF(MONTH(CURDATE()) = MONTH(STR_TO_DATE(data_,'%d-%M-%Y')) AND DAY(CURDATE()) > DAY(STR_TO_DATE(data_,'%d-%M-%Y')), 1, 0))
+       YEAR)
+        BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+
+        ]]>
+	</sql>
+	
+	
+	
+	<sql id="milestone">
+    <![CDATA[
+ select *,STR_TO_DATE(data_,'%d-%M-%Y'),TIMESTAMPDIFF(YEAR,STR_TO_DATE(data_,'%d-%M-%Y'),CURDATE()) from ExpandoValue WHERE TABLEID=29863 AND COLUMNID=2599323 and
+TIMESTAMPDIFF(YEAR,STR_TO_DATE(data_,'%d-%M-%Y'),CURDATE()) >= 5 ;
+        ]]>
+	</sql>
+</custom-sql>

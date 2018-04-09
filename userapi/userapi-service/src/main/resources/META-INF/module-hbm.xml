@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="userapi.model.activeemployeeinfosample" />
+	<import class="userapi.model.areahandled" />
+	<import class="userapi.model.branch" />
+	<import class="userapi.model.business" />
+	<import class="userapi.model.department" />
+	<import class="userapi.model.designation" />
+	<import class="userapi.model.functiontable" />
+	<import class="userapi.model.grade" />
+	<import class="userapi.model.jvbranch" />
+	<import class="userapi.model.locationtable" />
+	<import class="userapi.model.regiontable" />
+	<import class="userapi.model.screennameempidmapping" />
+	<import class="userapi.model.unit" />
+	<import class="userapi.model.zone" />
+	<class name="userapi.model.impl.activeemployeeinfosampleImpl" table="activeemployeeinfosample">
+		<id name="srno" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="Milestone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="EmpId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Emailid" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Photo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="DOJ" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ExitOn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Birthday" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Anniversary" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Business" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Unit" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="GradeGroup" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Grade" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FunctionName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Department" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Designation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Zone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Region" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Location" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Product" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="JVBranch" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Branch" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Costcenter" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="AreaHandled" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FirstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="userapi.model.impl.areahandledImpl" table="areahandled">
+		<id name="area_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="area" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.branchImpl" table="branch">
+		<id name="branch_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="branch" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.businessImpl" table="business">
+		<id name="business_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="business" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="short_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="userapi.model.impl.departmentImpl" table="department">
+		<id name="dept_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="department" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.designationImpl" table="designation">
+		<id name="desig_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="designation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.functiontableImpl" table="functiontable">
+		<id name="function_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="function" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.gradeImpl" table="grade">
+		<id name="grade_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="grade" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.jvbranchImpl" table="jvbranch">
+		<id name="jvbranch_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="jvbranch" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.locationtableImpl" table="locationtable">
+		<id name="loc_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="location" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.regiontableImpl" table="regiontable">
+		<id name="region_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="region" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.screennameempidmappingImpl" table="screennameempidmapping">
+		<id name="srno" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="screenname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="empid" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="userapi.model.impl.unitImpl" table="unit">
+		<id name="unit_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="unit" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="short_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="userapi.model.impl.zoneImpl" table="zone">
+		<id name="zone_id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="zone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="business_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isactive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

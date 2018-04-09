@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="userapi.service.impl.activeemployeeinfosampleLocalServiceImpl" id="userapi.service.activeemployeeinfosampleLocalService" />
+	<bean class="userapi.service.impl.activeemployeeinfosampleServiceImpl" id="userapi.service.activeemployeeinfosampleService" />
+	<bean class="userapi.service.persistence.impl.activeemployeeinfosamplePersistenceImpl" id="userapi.service.persistence.activeemployeeinfosamplePersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.areahandledLocalServiceImpl" id="userapi.service.areahandledLocalService" />
+	<bean class="userapi.service.impl.areahandledServiceImpl" id="userapi.service.areahandledService" />
+	<bean class="userapi.service.persistence.impl.areahandledPersistenceImpl" id="userapi.service.persistence.areahandledPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.branchLocalServiceImpl" id="userapi.service.branchLocalService" />
+	<bean class="userapi.service.impl.branchServiceImpl" id="userapi.service.branchService" />
+	<bean class="userapi.service.persistence.impl.branchPersistenceImpl" id="userapi.service.persistence.branchPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.businessLocalServiceImpl" id="userapi.service.businessLocalService" />
+	<bean class="userapi.service.impl.businessServiceImpl" id="userapi.service.businessService" />
+	<bean class="userapi.service.persistence.impl.businessPersistenceImpl" id="userapi.service.persistence.businessPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.departmentLocalServiceImpl" id="userapi.service.departmentLocalService" />
+	<bean class="userapi.service.impl.departmentServiceImpl" id="userapi.service.departmentService" />
+	<bean class="userapi.service.persistence.impl.departmentPersistenceImpl" id="userapi.service.persistence.departmentPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.designationLocalServiceImpl" id="userapi.service.designationLocalService" />
+	<bean class="userapi.service.impl.designationServiceImpl" id="userapi.service.designationService" />
+	<bean class="userapi.service.persistence.impl.designationPersistenceImpl" id="userapi.service.persistence.designationPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.functiontableLocalServiceImpl" id="userapi.service.functiontableLocalService" />
+	<bean class="userapi.service.impl.functiontableServiceImpl" id="userapi.service.functiontableService" />
+	<bean class="userapi.service.persistence.impl.functiontablePersistenceImpl" id="userapi.service.persistence.functiontablePersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.gradeLocalServiceImpl" id="userapi.service.gradeLocalService" />
+	<bean class="userapi.service.impl.gradeServiceImpl" id="userapi.service.gradeService" />
+	<bean class="userapi.service.persistence.impl.gradePersistenceImpl" id="userapi.service.persistence.gradePersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.jvbranchLocalServiceImpl" id="userapi.service.jvbranchLocalService" />
+	<bean class="userapi.service.impl.jvbranchServiceImpl" id="userapi.service.jvbranchService" />
+	<bean class="userapi.service.persistence.impl.jvbranchPersistenceImpl" id="userapi.service.persistence.jvbranchPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.locationtableLocalServiceImpl" id="userapi.service.locationtableLocalService" />
+	<bean class="userapi.service.impl.locationtableServiceImpl" id="userapi.service.locationtableService" />
+	<bean class="userapi.service.persistence.impl.locationtablePersistenceImpl" id="userapi.service.persistence.locationtablePersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.regiontableLocalServiceImpl" id="userapi.service.regiontableLocalService" />
+	<bean class="userapi.service.impl.regiontableServiceImpl" id="userapi.service.regiontableService" />
+	<bean class="userapi.service.persistence.impl.regiontablePersistenceImpl" id="userapi.service.persistence.regiontablePersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.screennameempidmappingLocalServiceImpl" id="userapi.service.screennameempidmappingLocalService" />
+	<bean class="userapi.service.impl.screennameempidmappingServiceImpl" id="userapi.service.screennameempidmappingService" />
+	<bean class="userapi.service.persistence.impl.screennameempidmappingPersistenceImpl" id="userapi.service.persistence.screennameempidmappingPersistence" parent="basePersistence" />
+	<bean class="userapi.service.persistence.impl.screennameempidmappingFinderImpl" id="userapi.service.persistence.screennameempidmappingFinder" parent="basePersistence" />
+	<bean class="userapi.service.impl.unitLocalServiceImpl" id="userapi.service.unitLocalService" />
+	<bean class="userapi.service.impl.unitServiceImpl" id="userapi.service.unitService" />
+	<bean class="userapi.service.persistence.impl.unitPersistenceImpl" id="userapi.service.persistence.unitPersistence" parent="basePersistence" />
+	<bean class="userapi.service.impl.zoneLocalServiceImpl" id="userapi.service.zoneLocalService" />
+	<bean class="userapi.service.impl.zoneServiceImpl" id="userapi.service.zoneService" />
+	<bean class="userapi.service.persistence.impl.zonePersistenceImpl" id="userapi.service.persistence.zonePersistence" parent="basePersistence" />
+</beans>

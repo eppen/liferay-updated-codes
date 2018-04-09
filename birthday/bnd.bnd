@@ -1,0 +1,4 @@
+Bundle-Name: birthday
+Bundle-SymbolicName: birthday
+Bundle-Version: 1.0.0
+Export-Package: birthday.constants
